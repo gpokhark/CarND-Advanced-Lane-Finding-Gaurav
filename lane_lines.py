@@ -116,17 +116,39 @@ class Lane_Lines(object):
             badlines = True
         if (rightx.size == 0 and righty.size == 0):
             badlines = True
-#         if (np.mean(rightx) > np.mean(righty)):
-#             badlines = True
+        if (np.mean(leftx) > np.mean(rightx)):
+            badlines = True
+        t_left_fit = self.left_fit
+        t_right_fit = self.right_fit
+        
+        if not badlines:
+#             self.left_fit = np.polyfit(lefty, leftx, 2)
+#             self.right_fit = np.polyfit(righty, rightx, 2)
+            t_left_fit = np.polyfit(lefty, leftx, 2)
+            t_right_fit = np.polyfit(righty, rightx, 2)            
+
+        # Generate x and y values for plotting
+#         ploty = np.linspace(0, self.binary_warped.shape[0]-1, self.binary_warped.shape[0] )
+        try:
+#             left_fitx = self.left_fit[0]*self.ploty**2 + self.left_fit[1]*self.ploty + self.left_fit[2]
+#             right_fitx = self.right_fit[0]*self.ploty**2 + self.right_fit[1]*self.ploty + self.right_fit[2]
+            left_fitx = t_left_fit[0]*self.ploty**2 + t_left_fit[1]*self.ploty + t_left_fit[2]
+            right_fitx = t_right_fit[0]*self.ploty**2 + t_right_fit[1]*self.ploty + t_right_fit[2]
+        except TypeError:
+            # Avoids an error if `left` and `right_fit` are still none or incorrect
+            print('The function failed to fit a line!')
+            left_fitx = 1*self.ploty**2 + 1*self.ploty
+            right_fitx = 1*self.ploty**2 + 1*self.ploty
+            
+        if (np.mean(left_fitx) > np.mean(right_fitx)):
+            badlines = True
         
         
         if not badlines:
             self.left_fit = np.polyfit(lefty, leftx, 2)
             self.right_fit = np.polyfit(righty, rightx, 2)
             
-
-        # Generate x and y values for plotting
-#         ploty = np.linspace(0, self.binary_warped.shape[0]-1, self.binary_warped.shape[0] )
+            
         try:
             left_fitx = self.left_fit[0]*self.ploty**2 + self.left_fit[1]*self.ploty + self.left_fit[2]
             right_fitx = self.right_fit[0]*self.ploty**2 + self.right_fit[1]*self.ploty + self.right_fit[2]
@@ -134,7 +156,7 @@ class Lane_Lines(object):
             # Avoids an error if `left` and `right_fit` are still none or incorrect
             print('The function failed to fit a line!')
             left_fitx = 1*self.ploty**2 + 1*self.ploty
-            right_fitx = 1*self.ploty**2 + 1*self.ploty
+            right_fitx = 1*self.ploty**2 + 1*self.ploty       
 
         ## Visualization ##
         # Colors in the left and right lane regions
