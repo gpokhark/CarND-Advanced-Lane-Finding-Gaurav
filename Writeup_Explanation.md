@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/Original_vs_UndistortedImage.JPG "Original vs Undistorted Image"
+[image1]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/output_images/Original_vs_UndistortedImage.JPG "Original vs Undistorted Image"
 [image2]: ./output_images/Original_vs_Undistorted_Warped.JPG "Undistorted and Warped Image"
 [image3]: ./output_images/Perspective_View.jpg "Thresholded and Perspective View"
 [image4]: ./output_images/Lane_Lines.jpg "Lane_Lines"
