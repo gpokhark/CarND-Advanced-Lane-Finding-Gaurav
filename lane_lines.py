@@ -180,6 +180,4 @@ class Lane_Lines(object):
         center_offset_m = center_offset_p * xm_per_pix
     
         return left_curverad, right_curverad, center_offset_m
-    
-    def is_badlines(self):
         
