@@ -98,6 +98,7 @@ I used sliding window search to find an plot lane lines in my warped image. For 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 I calculated the radius of curvature and position of the vehicle in the lane using `measure_curvature_real` function in the class file. I used the code taught in the video lectures.
+
 `#Define conversions in x and y from pixels space to meters
 ym_per_pix = 30/720 # meters per pixel in y dimension
 xm_per_pix = 3.7/700 # meters per pixel in x dimension
@@ -111,7 +112,8 @@ Later calculated the lane center by subtracting the fitted x and y values for th
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in block Complete Pipeline Structure lines # 45 through # 52 in my code in `Gaurav_Project.ipynb`.  
+I implemented this step in block Complete Pipeline Structure lines # 45 through # 52 in my code in `Gaurav_Project.ipynb`. 
+
 `#Unwarp the images
 dstack_thresh = np.dstack((binary_w,binary_w,binary_w))*255
 dstack_thresh_size = (dstack_thresh.shape[1], dstack_thresh.shape[0])
@@ -149,7 +151,9 @@ Solved the problems as follows -
 1) To eliminate shadow and light problems I used saturation thresholding on the original image, light saturation on the original image, x direction sobel on s channel as explained earlier.
 2) Due to absence of right lane markings in certain frames I used the polynomial fit function from the previous frame.
 3) In case of wobbly lines applied following condition to eliminate bad frames - 
+
 `((new_mean > 1.3*old_mean) or (new_mean < 0.7*old_mean))`
+
 mean - is the mean difference between the fitted x and fitted y values. Compared this value for the new frame and the old frame and when it was more than 1.3 times or less than 0.7 times the older width I neglected those frames.
 
 To make my pipeline robust following improvements can be added -
