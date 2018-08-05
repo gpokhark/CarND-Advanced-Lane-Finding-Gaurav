@@ -19,12 +19,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/output_images/Original_vs_UndistortedImage.JPG "Original vs Undistorted Image"
-[image2]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/output_images/Original_vs_Undistorted_Warped.JPG "Undistorted and Warped Image"
-[image3]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/output_images/Perspective_View.jpg "Thresholded and Perspective View"
-[image4]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/output_images/Lane_Lines.jpg "Lane_Lines"
-[image5]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/output_images/Lane_Lines_Overlay.jpg "Lane Lines Overlay"
-[video1]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/output_images/project_video_output.mp4 "Video"
+[image1]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/output_images/Original_vs_UndistortedImage.JPG "Original vs Undistorted Image"
+[image2]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/Original_vs_Undistorted_Warped.JPG "Undistorted and Warped Image"
+[image3]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/Perspective_View.jpg "Thresholded and Perspective View"
+[image4]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/Lane_Lines.jpg "Lane_Lines"
+[image5]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/Lane_Lines_Overlay.jpg "Lane Lines Overlay"
+[video1]: https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/project_video_output.mp4 "Video"
 
 ---
 
