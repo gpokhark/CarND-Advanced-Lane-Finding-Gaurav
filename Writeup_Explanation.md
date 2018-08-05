@@ -19,12 +19,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-
-![image2]: (/output_images/Original_vs_Undistorted_Warped.JPG) "Undistorted and Warped Image"
-![image3]: (https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/Perspective_View.JPG) "Thresholded and Perspective View"
-![image4]: (https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/Lane_Lines.JPG) "Lane_Lines"
-![image5]: (https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/Lane_Lines_Overlay.JPG) "Lane Lines Overlay"
-![video1]: (https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/project_video_output.mp4) "Video"
+[image1]: ./output_images/Original_vs_UndistortedImage.JPG "Original vs Undistorted Image"
+[image2]: ./output_images/Original_vs_Undistorted_Warped.JPG "Undistorted and Warped Image"
+[image3]: ./output_images/Perspective_View.JPG "Thresholded and Perspective View"
+[image4]: ./output_images/Lane_Lines.JPG "Lane_Lines"
+[image5]: ./output_images/Lane_Lines_Overlay.JPG "Lane Lines Overlay"
+[video1]: ./output_images/project_video_output.mp4 "Video"
 
 ---
 
@@ -43,9 +43,9 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-![](/output_images/Original_vs_UndistortedImage.jpg) "Original vs Undistorted Image"
+![alt text][image1]
 
-Later stored the Camera Matrix and Distortion Coefficient in [wide_dist_pickle](https://github.com/gpokhark/CarND-Advanced-Lane-Finding-Gaurav/tree/master/output_images/camera_cal)
+Later stored the Camera Matrix and Distortion Coefficient in [wide_dist_pickle](./camera_cal)
 
 ### Pipeline (single images)
 
